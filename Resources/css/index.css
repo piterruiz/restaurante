@@ -1,0 +1,129 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    box-sizing: 0px;
+}
+body {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    position: relative; /* Necesario para posicionar el pseudo-elemento */
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(65, 50, 3);
+    margin: 0; /* Elimina el margen por defecto del body */
+    overflow: hidden; /* Evita el desplazamiento si es necesario */
+}
+
+body::before {
+    content: "";
+    background-image: url("../../Resources/Img/retaurante1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5; /* Ajusta la opacidad aquí (0.0 a 1.0) */
+    z-index: -1; /* Asegura que esté detrás del contenido */
+}
+.container{
+    width: 50%;
+    height: 700px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #cccc;
+    stop-opacity: block;
+    margin: 0px auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #aaa;
+
+
+}
+.caja1{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 250px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    color: antiquewhite;
+}
+.caja1 img{
+    width: 20%;
+    height: 60%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+
+}
+.caja2{
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    height: 450px;
+}
+.caja2 .form{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 4px;
+    justify-content: space-evenly;
+    height: 450px;
+    align-items: center;
+}
+.caja2 .form label{
+    width: 80%;
+    display: flex;
+    padding: 5px;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 20px;
+}
+.caja2 .form input[type="text"],
+.caja2 .form input[type="password"]{
+    font-size: 20px;
+    padding: 10px;
+    width: 80%;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #836666;
+}
+.caja2 .form a{
+   
+    width: 30%;
+}
+@media(min-width:500px) and (max-width:800px) {
+   
+    .container{
+        width: 70%;
+    }
+}
+@media(max-width:500px) and (min-width:416px) {
+    .caja1 img{
+        width: 40%;
+        
+        
+    
+    }
+    .container{
+        width: 90%;
+    }
+}
+@media(max-width:416px) {
+    .caja1 img{
+        width: 60%;  
+    }
+    .container{
+        width: 100%;
+    }
+}
+
